@@ -33,7 +33,7 @@ TEAM_ASSETS = {
     "Sacramento Kings": {"color": "#5A2D81", "logo": "https://a.espncdn.com/i/teamlogos/nba/500/sac.png"},
     "San Antonio Spurs": {"color": "#C4CED4", "logo": "https://a.espncdn.com/i/teamlogos/nba/500/sa.png"},
     "Toronto Raptors": {"color": "#CE1141", "logo": "https://a.espncdn.com/i/teamlogos/nba/500/tor.png"},
-    "Utah Jazz": {"color": "#002B5C", "logo": "https://a.espncdn.com/i/teamlogos/nba/500/uta.png"},
+    "Utah Jazz": {"color": "#002B5C", "logo": "https://a.espncdn.com/i/teamlogos/nba/500/utah.png"},
     "Washington Wizards": {"color": "#002B5C", "logo": "https://a.espncdn.com/i/teamlogos/nba/500/wsh.png"}
 }
 
