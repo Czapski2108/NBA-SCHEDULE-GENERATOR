@@ -16,15 +16,6 @@ def fetch_nba_odds():
         return parse_odds_data(response.json())
     return get_sample_games()
 
-def get_sample_games():
-    # Fallback structure matching your graphic layout
-    return [
-        {"away": "Timberwolves", "away_spread": "-3.5", "total": "229.5", "home": "Wizards", "home_spread": "+3.5"},
-        {"away": "Mavericks", "away_spread": "+8.5", "total": "212.5", "home": "Celtics", "home_spread": "-8.5"},
-        {"away": "Bulls", "away_spread": "+9.5", "total": "241.5", "home": "Cavaliers", "home_spread": "-9.5"},
-        {"away": "Rockets", "away_spread": "-2.5", "total": "230.5", "home": "Heat", "home_spread": "+2.5"},
-    ]
-
 def parse_odds_data(data):
     # Parse incoming API JSON into clean match objects for your template
     games = []
