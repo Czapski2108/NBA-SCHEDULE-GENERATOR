@@ -112,8 +112,8 @@ def get_sample_games():
 
 def generate_html(games):
     cards_html = ""
-    # Limit to 8 games to fit the 1080x1350 vertical layout cleanly
-    for g in games[:8]:
+    # Process ALL games returned from the API, up to 15
+    for g in games:
         away_data = get_team_asset(g['away'])
         home_data = get_team_asset(g['home'])
         
@@ -149,51 +149,52 @@ def generate_html(games):
                 width: 1080px;
                 height: 1350px;
                 margin: 0;
-                padding: 45px 55px;
+                padding: 35px 50px;
                 box-sizing: border-box;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                overflow: hidden;
             }}
             h1 {{
                 font-family: 'Anton', sans-serif;
-                font-size: 92px;
-                letter-spacing: 3px;
-                margin: 0 0 25px 0;
+                font-size: 76px;
+                letter-spacing: 2px;
+                margin: 0 0 15px 0;
                 text-transform: uppercase;
-                text-shadow: 0 8px 20px rgba(0, 0, 0, 0.55);
+                text-shadow: 0 6px 16px rgba(0, 0, 0, 0.55);
             }}
             .column-headers {{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 45px;
+                gap: 40px;
                 width: 100%;
-                margin-bottom: 8px;
+                margin-bottom: 6px;
             }}
             .header-labels {{
                 display: flex;
                 justify-content: space-around;
-                font-size: 22px;
+                font-size: 20px;
                 font-weight: 700;
-                letter-spacing: 1.5px;
-                color: #e2e8f0;
+                letter-spacing: 1px;
+                color: #cbd5e1;
             }}
             .grid {{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 28px 45px;
+                gap: 14px 40px; /* Reduced vertical gap to safely pack up to 15 games */
                 width: 100%;
             }}
             .card {{
-                box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65);
-                border: 2px solid rgba(255, 255, 255, 0.25);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+                border: 2px solid rgba(255, 255, 255, 0.2);
                 background: #0f172a;
-                border-radius: 6px;
+                border-radius: 4px;
                 overflow: hidden;
             }}
             .logo-banner {{
                 display: flex;
-                height: 110px;
+                height: 72px; /* Slightly compacted banner height for heavy slates */
                 position: relative;
                 overflow: hidden;
             }}
@@ -210,43 +211,42 @@ def generate_html(games):
                 content: '';
                 position: absolute;
                 inset: 0;
-                box-shadow: inset 0 0 25px rgba(0,0,0,0.4);
+                box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
             }}
             .team-logo {{
-                width: 130px;
-                height: 130px;
+                width: 90px;
+                height: 90px;
                 object-fit: contain;
-                filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+                filter: drop-shadow(0 3px 6px rgba(0,0,0,0.5));
                 z-index: 2;
             }}
             .divider {{
-                width: 3px;
+                width: 2px;
                 background: rgba(255, 255, 255, 0.4);
                 z-index: 3;
             }}
             .odds-bar {{
                 background: linear-gradient(180deg, #f8fafc 0%, #cbd5e1 100%);
                 color: #0f172a;
-                height: 52px;
+                height: 38px; /* Compact odds bar for high-density slates */
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                font-size: 28px;
+                font-size: 22px;
                 font-weight: 700;
-                border-top: 2px solid #94a3b8;
+                border-top: 1px solid #94a3b8;
             }}
             .footer {{
                 margin-top: auto;
                 font-family: Arial, sans-serif;
-                font-size: 13px;
+                font-size: 12px;
                 color: #94a3b8;
                 text-align: center;
-                line-height: 1.4;
             }}
         </style>
     </head>
     <body>
-        <h1>TODAY'S GAMES</h1>
+        <h1>TODAY'S GAMES ({len(games)})</h1>
         <div class="column-headers">
             <div class="header-labels"><span>AWAY</span><span>O/U</span><span>HOME</span></div>
             <div class="header-labels"><span>AWAY</span><span>O/U</span><span>HOME</span></div>
