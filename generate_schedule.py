@@ -69,8 +69,12 @@ def fetch_nba_odds():
         if not bookmakers:
             continue
             
-        # Grab lines from FanDuel or DraftKings if available, otherwise first bookmaker
-        book = next((b for b in bookmakers if b['key'] in ['fanduel', 'draftkings']), bookmakers[0])
+        # Priority: Circa -> FanDuel -> First available bookmaker
+        book = next((b for b in bookmakers if b['key'] == 'circa'), None)
+        if not book:
+            book = next((b for b in bookmakers if b['key'] == 'fanduel'), None)
+        if not book:
+            book = bookmakers[0]
         
         away_spread, home_spread, total = "N/A", "N/A", "N/A"
         
