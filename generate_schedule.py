@@ -238,7 +238,7 @@ def generate_html(games):
             }}
             .footer {{
                 margin-top: auto;
-                font-family: Arial, sans-serif;
+                font-family: Maison Neue Extended, sans-serif;
                 font-size: 12px;
                 color: #94a3b8;
                 text-align: center;
