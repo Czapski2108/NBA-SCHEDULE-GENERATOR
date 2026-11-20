@@ -226,8 +226,8 @@ def generate_html(games):
                 overflow: hidden;
             }}
             .team-logo {{
-                width: 74px;
-                height: 74px;
+                width: 150px;
+                height: 150px;
                 object-fit: contain;
                 filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.55));
                 z-index: 2;
