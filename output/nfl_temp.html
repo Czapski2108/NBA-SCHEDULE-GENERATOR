@@ -1,0 +1,397 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                background: radial-gradient(circle at 50% 8%, #15803d 0%, #064e3b 52%, #022c22 100%);
+                color: white;
+                font-family: 'Oswald', sans-serif;
+                width: 1080px;
+                height: 1350px;
+                margin: 0;
+                padding: 32px 48px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                overflow: hidden;
+            }
+            h1 {
+                font-family: 'Anton', sans-serif;
+                font-size: 72px;
+                letter-spacing: 2.5px;
+                margin: 0 0 12px 0;
+                text-transform: uppercase;
+                text-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+            }
+            .column-headers {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 38px;
+                width: 100%;
+                margin-bottom: 6px;
+            }
+            .header-labels {
+                display: flex;
+                justify-content: space-around;
+                font-size: 19px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                color: #dcfce7;
+            }
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 11px 38px;
+                width: 100%;
+            }
+            .card {
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.55);
+                border: 2px solid rgba(255, 255, 255, 0.22);
+                background: #052e16;
+                border-radius: 4px;
+                overflow: hidden;
+            }
+            .logo-banner {
+                display: flex;
+                height: 64px;
+                position: relative;
+                overflow: hidden;
+            }
+            .team-half {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                overflow: hidden;
+            }
+            .team-half::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.42);
+            }
+            .team-logo {
+                width: 82px;
+                height: 82px;
+                object-fit: contain;
+                filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
+                z-index: 2;
+            }
+            .divider {
+                width: 2px;
+                background: rgba(255, 255, 255, 0.35);
+                z-index: 3;
+            }
+            .odds-bar {
+                background: linear-gradient(180deg, #f8fafc 0%, #cbd5e1 100%);
+                color: #052e16;
+                height: 34px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 20px;
+                font-weight: 700;
+                border-top: 1px solid #94a3b8;
+            }
+            .footer {
+                margin-top: auto;
+                font-family: Arial, sans-serif;
+                font-size: 12px;
+                color: #bbf7d0;
+                text-align: center;
+                opacity: 0.85;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>NFL SLATE (16)</h1>
+        <div class="column-headers">
+            <div class="header-labels"><span>AWAY</span><span>O/U</span><span>HOME</span></div>
+            <div class="header-labels"><span>AWAY</span><span>O/U</span><span>HOME</span></div>
+        </div>
+        <div class="grid">
+            
+        <div class="card">
+            <div class="logo-banner">
+                <div class="team-half" style="background-color: #97233F;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/ari.png" class="team-logo" />
+                </div>
+                <div class="divider"></div>
+                <div class="team-half" style="background-color: #E31837;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/kc.png" class="team-logo" />
+                </div>
+            </div>
+            <div class="odds-bar">
+                <span>+15.5</span>
+                <span class="ou-val">41.5</span>
+                <span>-15.5</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="logo-banner">
+                <div class="team-half" style="background-color: #241773;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/bal.png" class="team-logo" />
+                </div>
+                <div class="divider"></div>
+                <div class="team-half" style="background-color: #0085CA;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/car.png" class="team-logo" />
+                </div>
+            </div>
+            <div class="odds-bar">
+                <span>+2.5</span>
+                <span class="ou-val">43.5</span>
+                <span>-2.5</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="logo-banner">
+                <div class="team-half" style="background-color: #008E97;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/mia.png" class="team-logo" />
+                </div>
+                <div class="divider"></div>
+                <div class="team-half" style="background-color: #00338D;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" class="team-logo" />
+                </div>
+            </div>
+            <div class="odds-bar">
+                <span>+16.5</span>
+                <span class="ou-val">44.5</span>
+                <span>-16.5</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="logo-banner">
+                <div class="team-half" style="background-color: #D3BC8D;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/no.png" class="team-logo" />
+                </div>
+                <div class="divider"></div>
+                <div class="team-half" style="background-color: #0B162A;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/chi.png" class="team-logo" />
+                </div>
+            </div>
+            <div class="odds-bar">
+                <span>+11.5</span>
+                <span class="ou-val">48.5</span>
+                <span>-11.5</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="logo-banner">
+                <div class="team-half" style="background-color: #0C2340;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/ten.png" class="team-logo" />
+                </div>
+                <div class="divider"></div>
+                <div class="team-half" style="background-color: #041E42;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png" class="team-logo" />
+                </div>
+            </div>
+            <div class="odds-bar">
+                <span>+7.5</span>
+                <span class="ou-val">54.5</span>
+                <span>-7.5</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="logo-banner">
+                <div class="team-half" style="background-color: #D50A0A;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/tb.png" class="team-logo" />
+                </div>
+                <div class="divider"></div>
+                <div class="team-half" style="background-color: #0076B6;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/det.png" class="team-logo" />
+                </div>
+            </div>
+            <div class="odds-bar">
+                <span>+4.5</span>
+                <span class="ou-val">46.5</span>
+                <span>-4.5</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="logo-banner">
+                <div class="team-half" style="background-color: #FFB612;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" class="team-logo" />
+                </div>
+                <div class="divider"></div>
+                <div class="team-half" style="background-color: #004C54;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" class="team-logo" />
+                </div>
+            </div>
+            <div class="odds-bar">
+                <span>-4.5</span>
+                <span class="ou-val">37.5</span>
+                <span>+4.5</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="logo-banner">
+                <div class="team-half" style="background-color: #125740;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png" class="team-logo" />
+                </div>
+                <div class="divider"></div>
+                <div class="team-half" style="background-color: #0080C6;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/lac.png" class="team-logo" />
+                </div>
+            </div>
+            <div class="odds-bar">
+                <span>+3</span>
+                <span class="ou-val">41.5</span>
+                <span>-3</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="logo-banner">
+                <div class="team-half" style="background-color: #101820;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/lv.png" class="team-logo" />
+                </div>
+                <div class="divider"></div>
+                <div class="team-half" style="background-color: #FB4F14;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/den.png" class="team-logo" />
+                </div>
+            </div>
+            <div class="odds-bar">
+                <span>+9.5</span>
+                <span class="ou-val">40.5</span>
+                <span>-9.5</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="logo-banner">
+                <div class="team-half" style="background-color: #006778;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/jax.png" class="team-logo" />
+                </div>
+                <div class="divider"></div>
+                <div class="team-half" style="background-color: #0B2265;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png" class="team-logo" />
+                </div>
+            </div>
+            <div class="odds-bar">
+                <span>-5.5</span>
+                <span class="ou-val">46.5</span>
+                <span>+5.5</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="logo-banner">
+                <div class="team-half" style="background-color: #4F2683;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/min.png" class="team-logo" />
+                </div>
+                <div class="divider"></div>
+                <div class="team-half" style="background-color: #AA0000;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/sf.png" class="team-logo" />
+                </div>
+            </div>
+            <div class="odds-bar">
+                <span>+3</span>
+                <span class="ou-val">46.5</span>
+                <span>-3</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="logo-banner">
+                <div class="team-half" style="background-color: #FB4F14;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/cin.png" class="team-logo" />
+                </div>
+                <div class="divider"></div>
+                <div class="team-half" style="background-color: #5A1414;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png" class="team-logo" />
+                </div>
+            </div>
+            <div class="odds-bar">
+                <span>-6.5</span>
+                <span class="ou-val">53.5</span>
+                <span>+6.5</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="logo-banner">
+                <div class="team-half" style="background-color: #203731;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/gb.png" class="team-logo" />
+                </div>
+                <div class="divider"></div>
+                <div class="team-half" style="background-color: #003594;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/lar.png" class="team-logo" />
+                </div>
+            </div>
+            <div class="odds-bar">
+                <span>+3.5</span>
+                <span class="ou-val">45.5</span>
+                <span>-3.5</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="logo-banner">
+                <div class="team-half" style="background-color: #0B162A;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/chi.png" class="team-logo" />
+                </div>
+                <div class="divider"></div>
+                <div class="team-half" style="background-color: #0076B6;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/det.png" class="team-logo" />
+                </div>
+            </div>
+            <div class="odds-bar">
+                <span>-2.5</span>
+                <span class="ou-val">55.5</span>
+                <span>+2.5</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="logo-banner">
+                <div class="team-half" style="background-color: #004C54;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" class="team-logo" />
+                </div>
+                <div class="divider"></div>
+                <div class="team-half" style="background-color: #041E42;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png" class="team-logo" />
+                </div>
+            </div>
+            <div class="odds-bar">
+                <span>+7.5</span>
+                <span class="ou-val">47.5</span>
+                <span>-7.5</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="logo-banner">
+                <div class="team-half" style="background-color: #E31837;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/kc.png" class="team-logo" />
+                </div>
+                <div class="divider"></div>
+                <div class="team-half" style="background-color: #00338D;">
+                    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" class="team-logo" />
+                </div>
+            </div>
+            <div class="odds-bar">
+                <span>+3</span>
+                <span class="ou-val">50.5</span>
+                <span>-3</span>
+            </div>
+        </div>
+        
+        </div>
+        <div class="footer">
+            Lines prioritize Circa (FanDuel fallback). Gambling Problem? Call 1-800-GAMBLER. Odds subject to change.
+        </div>
+    </body>
+    </html>
+    
