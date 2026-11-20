@@ -20,8 +20,8 @@
             }
             h1 {
                 font-family: 'Anton', sans-serif;
-                font-size: 72px;
-                letter-spacing: 2.5px;
+                font-size: 76px;
+                letter-spacing: 3px;
                 margin: 0 0 12px 0;
                 text-transform: uppercase;
                 text-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
@@ -51,41 +51,44 @@
                 box-shadow: 0 8px 20px rgba(0, 0, 0, 0.55);
                 border: 2px solid rgba(255, 255, 255, 0.22);
                 background: #052e16;
-                border-radius: 4px;
+                border-radius: 8px;
                 overflow: hidden;
             }
             .logo-banner {
                 display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                padding: 6px 12px;
                 height: 64px;
+                box-sizing: border-box;
                 position: relative;
                 overflow: hidden;
             }
-            .team-half {
-                width: 50%;
+            .team-oval {
+                flex: 1;
                 height: 100%;
+                border-radius: 999px;
+                border: 2px solid rgba(255, 255, 255, 0.35);
+                box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.4), 0 3px 8px rgba(0, 0, 0, 0.35);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 position: relative;
                 overflow: hidden;
             }
-            .team-half::after {
-                content: '';
-                position: absolute;
-                inset: 0;
-                box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.42);
-            }
             .team-logo {
-                width: 82px;
-                height: 82px;
+                width: 74px;
+                height: 74px;
                 object-fit: contain;
-                filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
+                filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.55));
                 z-index: 2;
             }
-            .divider {
-                width: 2px;
-                background: rgba(255, 255, 255, 0.35);
-                z-index: 3;
+            .vs-badge {
+                font-size: 18px;
+                font-weight: 700;
+                color: #bbf7d0;
+                flex-shrink: 0;
             }
             .odds-bar {
                 background: linear-gradient(180deg, #f8fafc 0%, #cbd5e1 100%);
@@ -109,7 +112,7 @@
         </style>
     </head>
     <body>
-        <h1>NFL SLATE (16)</h1>
+        <h1>NFL LINES</h1>
         <div class="column-headers">
             <div class="header-labels"><span>AWAY</span><span>O/U</span><span>HOME</span></div>
             <div class="header-labels"><span>AWAY</span><span>O/U</span><span>HOME</span></div>
@@ -118,11 +121,11 @@
             
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: #97233F;">
+                <div class="team-oval" style="background-color: #97233F;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/ari.png" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: #E31837;">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: #E31837;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/kc.png" class="team-logo" />
                 </div>
             </div>
@@ -135,11 +138,11 @@
         
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: #241773;">
+                <div class="team-oval" style="background-color: #241773;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/bal.png" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: #0085CA;">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: #0085CA;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/car.png" class="team-logo" />
                 </div>
             </div>
@@ -152,11 +155,11 @@
         
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: #008E97;">
+                <div class="team-oval" style="background-color: #008E97;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/mia.png" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: #00338D;">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: #00338D;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" class="team-logo" />
                 </div>
             </div>
@@ -169,11 +172,11 @@
         
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: #D3BC8D;">
+                <div class="team-oval" style="background-color: #D3BC8D;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/no.png" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: #0B162A;">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: #0B162A;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/chi.png" class="team-logo" />
                 </div>
             </div>
@@ -186,11 +189,11 @@
         
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: #0C2340;">
+                <div class="team-oval" style="background-color: #0C2340;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/ten.png" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: #041E42;">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: #041E42;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png" class="team-logo" />
                 </div>
             </div>
@@ -203,11 +206,11 @@
         
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: #D50A0A;">
+                <div class="team-oval" style="background-color: #D50A0A;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/tb.png" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: #0076B6;">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: #0076B6;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/det.png" class="team-logo" />
                 </div>
             </div>
@@ -220,11 +223,11 @@
         
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: #FFB612;">
+                <div class="team-oval" style="background-color: #FFB612;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: #004C54;">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: #004C54;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" class="team-logo" />
                 </div>
             </div>
@@ -237,11 +240,11 @@
         
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: #125740;">
+                <div class="team-oval" style="background-color: #125740;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: #0080C6;">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: #0080C6;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/lac.png" class="team-logo" />
                 </div>
             </div>
@@ -254,11 +257,11 @@
         
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: #101820;">
+                <div class="team-oval" style="background-color: #101820;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/lv.png" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: #FB4F14;">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: #FB4F14;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/den.png" class="team-logo" />
                 </div>
             </div>
@@ -271,11 +274,11 @@
         
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: #006778;">
+                <div class="team-oval" style="background-color: #006778;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/jax.png" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: #0B2265;">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: #0B2265;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png" class="team-logo" />
                 </div>
             </div>
@@ -288,11 +291,11 @@
         
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: #4F2683;">
+                <div class="team-oval" style="background-color: #4F2683;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/min.png" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: #AA0000;">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: #AA0000;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/sf.png" class="team-logo" />
                 </div>
             </div>
@@ -305,28 +308,28 @@
         
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: #FB4F14;">
+                <div class="team-oval" style="background-color: #FB4F14;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/cin.png" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: #5A1414;">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: #5A1414;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png" class="team-logo" />
                 </div>
             </div>
             <div class="odds-bar">
-                <span>-6.5</span>
+                <span>-5.5</span>
                 <span class="ou-val">53.5</span>
-                <span>+6.5</span>
+                <span>+5.5</span>
             </div>
         </div>
         
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: #203731;">
+                <div class="team-oval" style="background-color: #203731;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/gb.png" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: #003594;">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: #003594;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/lar.png" class="team-logo" />
                 </div>
             </div>
@@ -339,11 +342,11 @@
         
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: #0B162A;">
+                <div class="team-oval" style="background-color: #0B162A;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/chi.png" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: #0076B6;">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: #0076B6;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/det.png" class="team-logo" />
                 </div>
             </div>
@@ -356,11 +359,11 @@
         
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: #004C54;">
+                <div class="team-oval" style="background-color: #004C54;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: #041E42;">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: #041E42;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png" class="team-logo" />
                 </div>
             </div>
@@ -373,11 +376,11 @@
         
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: #E31837;">
+                <div class="team-oval" style="background-color: #E31837;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/kc.png" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: #00338D;">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: #00338D;">
                     <img src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" class="team-logo" />
                 </div>
             </div>
