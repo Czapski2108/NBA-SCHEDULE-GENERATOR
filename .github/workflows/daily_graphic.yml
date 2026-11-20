@@ -25,7 +25,9 @@ jobs:
           playwright install chromium
 
       - name: Run generation script
-        run: python generate_schedule.py
+        run: 
+        python generate_schedule.py
+        python generate_nfl_schedule.py
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
 
