@@ -130,11 +130,11 @@ def generate_html(games):
         cards_html += f"""
         <div class="card">
             <div class="logo-banner">
-                <div class="team-half" style="background-color: {away_data['color']};">
+                <div class="team-oval" style="background-color: {away_data['color']};">
                     <img src="{away_data['logo']}" class="team-logo" />
                 </div>
-                <div class="divider"></div>
-                <div class="team-half" style="background-color: {home_data['color']};">
+                <div class="vs-badge">@</div>
+                <div class="team-oval" style="background-color: {home_data['color']};">
                     <img src="{home_data['logo']}" class="team-logo" />
                 </div>
             </div>
@@ -168,8 +168,8 @@ def generate_html(games):
             }}
             h1 {{
                 font-family: 'Anton', sans-serif;
-                font-size: 72px;
-                letter-spacing: 2.5px;
+                font-size: 76px;
+                letter-spacing: 3px;
                 margin: 0 0 12px 0;
                 text-transform: uppercase;
                 text-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
@@ -199,41 +199,44 @@ def generate_html(games):
                 box-shadow: 0 8px 20px rgba(0, 0, 0, 0.55);
                 border: 2px solid rgba(255, 255, 255, 0.22);
                 background: #052e16;
-                border-radius: 4px;
+                border-radius: 8px;
                 overflow: hidden;
             }}
             .logo-banner {{
                 display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                padding: 6px 12px;
                 height: 64px;
+                box-sizing: border-box;
                 position: relative;
                 overflow: hidden;
             }}
-            .team-half {{
-                width: 50%;
+            .team-oval {{
+                flex: 1;
                 height: 100%;
+                border-radius: 999px;
+                border: 2px solid rgba(255, 255, 255, 0.35);
+                box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.4), 0 3px 8px rgba(0, 0, 0, 0.35);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 position: relative;
                 overflow: hidden;
             }}
-            .team-half::after {{
-                content: '';
-                position: absolute;
-                inset: 0;
-                box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.42);
-            }}
             .team-logo {{
-                width: 82px;
-                height: 82px;
+                width: 74px;
+                height: 74px;
                 object-fit: contain;
-                filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
+                filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.55));
                 z-index: 2;
             }}
-            .divider {{
-                width: 2px;
-                background: rgba(255, 255, 255, 0.35);
-                z-index: 3;
+            .vs-badge {{
+                font-size: 18px;
+                font-weight: 700;
+                color: #bbf7d0;
+                flex-shrink: 0;
             }}
             .odds-bar {{
                 background: linear-gradient(180deg, #f8fafc 0%, #cbd5e1 100%);
@@ -257,7 +260,7 @@ def generate_html(games):
         </style>
     </head>
     <body>
-        <h1>NFL SLATE ({len(games)})</h1>
+        <h1>NFL LINES</h1>
         <div class="column-headers">
             <div class="header-labels"><span>AWAY</span><span>O/U</span><span>HOME</span></div>
             <div class="header-labels"><span>AWAY</span><span>O/U</span><span>HOME</span></div>
